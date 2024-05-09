@@ -1,0 +1,43 @@
+.main-div {
+    flex: 1 0 calc(10% - 20px); 
+    margin: 0.5em; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-div {
+    display: flex;
+    background-color: rgb(190, 166, 166);
+    width: 100%;
+    max-width: 6em; 
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    margin-block: 1em;
+    color: blue; 
+}
+
+a:hover {
+    text-decoration: underline; 
+}
+
+@media (max-width: 960px) {
+    .main-div {
+        flex-basis: calc(25% - 20px); /* При ширине экрана до 960px, показывать максимум 4 карты в ряду */
+    }
+}
+
+@media (max-width: 640px) {
+    .main-div {
+        flex-basis: calc(33.3333% - 20px); /* При ширине экрана до 640px, показывать максимум 3 карты в ряду */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-div {
+        flex-basis: calc(50% - 20px); /* При ширине экрана до 480px, показывать максимум 2 карты в ряду */
+    }
+}
